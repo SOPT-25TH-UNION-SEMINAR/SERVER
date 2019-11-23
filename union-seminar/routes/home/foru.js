@@ -7,7 +7,7 @@ const forU = require('../../model/foru');
 
 router.get('/',(req,res) =>{
     /* 포유 곡 리스트 전체 조회 */
-    /*
+    
     forU.songs()
     .then(({
         code,
@@ -16,9 +16,7 @@ router.get('/',(req,res) =>{
     .catch((err) =>{
         console.log(err);
         res.status(statusCode.INTERNAL_SERVER_ERROR, authUtil.successFalse(responseMessage.INTERNAL_SERVER_ERROR));
-    })*/
-    const data = {path: req.originalUrl, method: req.method};
-    res.status(200).send(authUtil.successTrue('',data));
+    })
 })
 
 module.exports = router;
